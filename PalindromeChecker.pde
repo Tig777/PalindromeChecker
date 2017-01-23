@@ -14,30 +14,33 @@ public void setup()
     }
   }
 }
-
-
-
-
-
-public boolean palindrome(String word)
+public boolean palindrome(String cat)
 {
-  int bob = word.length();
-  for(int i = 0; i<(bob/2);i++)
+  String joe = jeff(cat);
+  if(joe.equals(reverse(joe)))
   {
-    if(word.charAt(i) != word.charAt(bob-i-1))
-    {
-      return false;
-    }
+      return true;
   }
-    return true;
+    return false;
 }
 public String reverse(String str)
 {
-    String sNew = new String();
+    String greg = new String();
     int nLast = str.length()-1;
     for(int nI=nLast; nI>=0; nI--)
-        sNew = sNew + str.charAt(nI);
-    return sNew;
+      {
+        greg = greg + str.charAt(nI);
+      }
+    return greg;
 }
-
-
+public String jeff(String sWord){
+  String bob = new String();
+  for(int i = 0; i < sWord.length(); i++)
+    {
+      if(Character.isLetter(sWord.charAt(i)) == true)
+      {
+        bob += sWord.charAt(i);
+      }  
+  }
+  return bob.toLowerCase();
+}
